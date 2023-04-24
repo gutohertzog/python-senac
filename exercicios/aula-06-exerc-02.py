@@ -45,3 +45,25 @@ elif numero < 0:
             print('não é múltiplo de 3, 5 ou 7')
 else:
     print('é zero')
+
+# método 2
+# primeiro testa para positivo, negativo ou zero
+if numero > 0:
+    print('O número é positivo.')
+elif numero < 0:
+    print('O número é negativo.')
+else:
+    print('O número é zero.')
+
+# agora testa para par ou ímpar
+if numero % 2 == 0:
+    print('O número é par.')
+else:
+    print('O número é ímpar.')
+
+    if numero % 3 == 0:
+        print('O número é múltiplo de 3.')
+    if numero % 5 == 0:
+        print('O número é múltiplo de 5.')
+    if numero % 7 == 0:
+        print('O número é múltiplo de 7.')

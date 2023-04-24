@@ -48,13 +48,18 @@ else:
     print('não sei que operação é essa!')
 
 # método 2
-# testa para divisão por zero
+# código de teste para operações matemáticas simples
+# o usuário fornece dois números e uma operação
+# o programa retorna o resultado da operação
+# o usuário pode escolher entre adição, subtração, multiplicação, divisão ou exponenciação
+# se a operação for divisão, e o segundo número for 0, o programa retorna uma mensagem de erro
+# se a operação não for válida, o programa retorna uma mensagem de erro
+# se a operação for válida, o programa retorna o resultado da operação
+
 if oper == '/' and num2 == '0':
     print('não posso dividir por 0')
-# verifica se o operador está incorreto
 elif oper != '+' or oper != '-' or oper != '*' or oper != '/' or oper != '**':
     print('não sei que operação é essa!')
-# operador correto, realiza o cálculo
 else:
     if oper == '+':
         result = float(num1) + float(num2)

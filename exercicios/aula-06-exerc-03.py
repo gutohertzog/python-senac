@@ -21,17 +21,40 @@ else:
     print('Seu voto é opcional!')
 
 # método 2
-if idade == 16 or idade == 17 or idade >= 65:
+# Verifica se a idade é igual ou maior que 18 anos
+if idade >= 18:
+    # Se sim, imprime que o voto é obrigatório
+    print('Seu voto é obrigatório!')
+# Se não, verifica se é maior ou igual a 16 anos ou maior ou igual a 65 anos
+elif idade >= 16 or idade >= 65:
+    # Se sim, imprime que o voto é opcional
     print('Seu voto é opcional!')
-elif idade >= 18:
-    print('Você é obrigado a votar!')
+# Se não, imprime que a pessoa é muito nova para votar
 else:
     print('Você é muito novo para votar!')
 
 # método 3
+# Verifica se a idade é menor que 16
 if idade < 16:
+    # Se sim, imprime na tela que o voto é opcional
     print('Você é muito novo para votar!')
+# Verifica se a idade é maior que 15 e menor que 18 ou se é maior que 64
 elif (idade > 15 and idade < 18) or idade > 64:
+    # Se sim, imprime na tela que o voto é opcional
     print('Seu voto é opcional!')
+# Se não, imprime na tela que o voto é obrigatório
 else:
     print('Você é obrigado a votar!')
+
+# método 4
+# esse método descarta entradas com idades menores que 1
+if idade >= 1 and idade < 16:
+    print ("vc ainda não pode votar")
+elif idade >= 16 and idade <= 17:
+    print ("voto eh opcional")
+elif idade >= 18 and idade <= 65:
+    print ("voto eh obrigatório")
+elif idade > 65:
+    print ("voto eh opcional")
+else:
+    print ("essa idade não existe!!!!")

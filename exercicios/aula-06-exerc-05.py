@@ -15,6 +15,7 @@
 
 idade = int(input('Digite sua idade : '))
 
+# método 1 - otimizado
 if idade < 3:
     print('Vá para o Berçário')
 # elif idade >= 3 and idade <= 5:
@@ -32,3 +33,78 @@ elif idade <= 17:
     print('Vá para o Ensino Médio no Ano {}'.format(serie))
 else:
     print('Vá para a faculdade')
+
+# método 2 - braçal
+if idade < 3:
+    print("Vá para o berçario")
+elif idade > 2 and idade < 6:
+    if idade == 3:
+        print("vá para a educação infantil N1")
+    elif idade == 4:
+        print("vá para a educação infantil N2")
+    elif idade == 5:
+        print("vá para a educação infantil N3")
+elif idade > 5 and idade < 15:
+    if idade == 6:
+        print("vá para o ensino fundamental no ano 1")
+    elif idade == 7:
+        print("vá para o ensino fundamental no ano 2")
+    elif idade == 8:
+        print("vá para o ensino fundamental no ano 3")
+    elif idade == 9:
+        print("vá para o ensino fundamental no ano 4")
+    elif idade == 10:
+        print("vá para o ensino fundamental no ano 5")
+    elif idade == 11:
+        print("vá para o ensino fundamental no ano 6")
+    elif idade == 12:
+        print("vá para o ensino fundamental no ano 7")
+    elif idade == 13:
+        print("vá para o ensino fundamental no ano 8")
+    elif idade == 14:
+        print("vá para o ensino fundamental no ano 9")
+elif idade > 14 and idade < 18:
+    if idade == 15:
+        print("vá para o ensino medio no ano 1")
+    elif idade == 16:
+        print("vá para o ensino medio no ano 2")
+    elif idade == 17:
+        print("vá para o ensino medio no ano 3")
+elif idade > 17:
+    print("Vá para faculdade")
+
+# método 3 - braçal otimizado
+if idade < 3:
+    print("Vá para o berçario")
+elif idade == 3:
+    print("vá para a educação infantil N1")
+elif idade == 4:
+    print("vá para a educação infantil N2")
+elif idade == 5:
+    print("vá para a educação infantil N3")
+elif idade == 6:
+    print("vá para o ensino fundamental no ano 1")
+elif idade == 7:
+    print("vá para o ensino fundamental no ano 2")
+elif idade == 8:
+    print("vá para o ensino fundamental no ano 3")
+elif idade == 9:
+    print("vá para o ensino fundamental no ano 4")
+elif idade == 10:
+    print("vá para o ensino fundamental no ano 5")
+elif idade == 11:
+    print("vá para o ensino fundamental no ano 6")
+elif idade == 12:
+    print("vá para o ensino fundamental no ano 7")
+elif idade == 13:
+    print("vá para o ensino fundamental no ano 8")
+elif idade == 14:
+    print("vá para o ensino fundamental no ano 9")
+elif idade == 15:
+    print("vá para o ensino medio no ano 1")
+elif idade == 16:
+    print("vá para o ensino medio no ano 2")
+elif idade == 17:
+    print("vá para o ensino medio no ano 3")
+else:
+    print("Vá para faculdade")
