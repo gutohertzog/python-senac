@@ -242,18 +242,3 @@ def potenciacao_recursiva(base, expoente):
     if expoente == 0:
         return 1
     return base * potenciacao_recursiva(base, expoente - 1)
-
-
-def potenciacao_sem_funcao():
-    """realiza a potenciação, mas sem chamar a função de multiplicação"""
-    n1, n2 = recebe_numeros()
-
-    cont_exp = 1
-    resultado = 1
-    while cont_exp <= n2:
-        cont_mult = 1
-        while cont_mult <= n1:
-            resultado += 1
-            cont_mult += 1
-        cont_exp += 1
-    return n1, n2, resultado
