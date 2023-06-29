@@ -132,5 +132,7 @@ if __name__ == '__main__':
     agenda:Agenda = Agenda()
     agenda.lista_contatos()
     agenda.busca_um()
+    # desafio: implementar a atualizacao e remocao de algum contato da agenda
+    # e realizar uma busca com filtro
     del agenda
 
