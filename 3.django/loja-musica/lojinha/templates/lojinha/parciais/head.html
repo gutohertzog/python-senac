@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+    />
+    <script
+        src="https://kit.fontawesome.com/ad0c4e912f.js"
+        crossorigin="anonymous"
+            ></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap"
+    rel="stylesheet"
+    />
+    <link href="{% static 'lojinha/css/styles.css' %}" rel="stylesheet" type="text/css" />
+    <title>Wavves Music Shop</title>
+    <style>
+.products__display__cards-item--img {
+    background: url({% static 'lojinha/imgs/card-1.jpg' %});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    .hotads__main_content-img,
+    .results__main_content-img {
+        width: 22.6875em;
+        height: 13.5em;
+        background: url({% static 'lojinha/imgs/cordoba-1.jpg' %});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    </style>
+</head>
+
