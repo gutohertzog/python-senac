@@ -6,7 +6,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('inicio.urls')),
-    path('nintendo', include('nintendo.urls')),
+    path('nintendo/', include('nintendo.urls')),
+    path('playstation/', include('playstation.urls')),
 ]
 
 # adicionando as pastas das mídias nas ulrs do projeto

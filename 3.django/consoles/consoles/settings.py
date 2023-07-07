@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # meus apps
     'inicio',
     'nintendo',
+    'playstation',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,3 @@
+# arquivos/pastas ignoradas pelo git
+.venv
+__pycache__

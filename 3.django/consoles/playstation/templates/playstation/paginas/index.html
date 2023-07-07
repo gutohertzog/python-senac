@@ -1,0 +1,19 @@
+{% extends 'global/paginas/index.html' %}
+
+{% load static %}
+
+{% block app_titulo %}Playstation - Home{% endblock app_titulo %}
+
+{% block app_menu %}
+    {% include 'playstation/parciais/menu.html' %}
+{% endblock app_menu %}
+
+{% block app_h1 %}Sou a página da Playstation{% endblock app_h1 %}
+
+{% block app_conteudo %}
+
+<img src="{% static 'playstation/imgs/logo-playstation.png' %}" alt="" width=250>
+
+<p>sou um bloco de conteúdo da página do playstation</p>
+
+{% endblock app_conteudo %}
