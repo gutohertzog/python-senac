@@ -19,7 +19,7 @@ Até o momento, para realizarmos alguma interação com o banco de dados, temos 
 Acontece que isso não faz sentido, nesse caso. Pois, qual é a necessidade de criar uma tabela de controle de usuário se ela já existe. Se olharmos o banco de dados `db.sqlite3`, podemos ver que existe uma tabela chamada `auth_user`. Como o nome sugere, essa tabela é usada para registrar e autenticar os usuários.
 
 <p align="center">
-    <img width="250" src="imagens/imagem-1.png">
+    <img src="imagens/imagem-1.png">
 </p>
 
 Se observamos ela, toda a estrutura já está pronta. Então não tem o porquê de reinventar a roda. Se realizarmos uma busca na tabela, veremos o registro do nosso usuário admin lá, com a senha criptografada, é claro.
@@ -37,7 +37,7 @@ Partindo dessa ideia, a validação vai se dar na função que faz a requisiçã
 Veja como ela vai ficar:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-3.png">
+    <img src="imagens/imagem-3.png">
 </p>
 
 Veja a grande atualização feita na função:
@@ -64,7 +64,7 @@ Uma vez que o usuário se cadastra, é então encaminhado para a tela de login. 
 Veja como ficará a função:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-4.png">
+    <img src="imagens/imagem-4.png">
 </p>
 
 Agora, veja como está funcionando:
@@ -85,30 +85,62 @@ Agora que já realizamos o login, temos que ser capazes de realizar o logout tam
 Para isso, vamos criar uma função em /usuario/views.py para realizar essa tarefa. Veja como ela vai ficar:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-5.png">
+    <img src="imagens/imagem-5.png">
 </p>
 
 Repare que ela é bem simples. Como a funcionalidade será apenas o logout do usuário, não há necessidade de criar uma página dedicada a isso. Embora tenhamos que cadastras ela no arquivo /usuario/urls.py para que o link seja visível.
 
 Veja como ficará:
 
+```python
+from django.urls import path
+from usuario.views import logout, view_login, view_cadastro
+
+app_name = 'usuario'
+
+urlpatterns = [
+    path('login/', view_login, name='login'),
+    path('cadastro/', view_cadastro, name='cadastro'),
+    path('logout/', logout, name='logout'),
+]
+```
+
 <p align="center">
-    <img width="700"  src="imagens/imagem-6.png">
+    <img src="imagens/imagem-6.png">
 </p>
 
 Ali, estamos apenas criando a url para a chamada da função de logout.
 
 Agora, por fim, tem que ainda adicionar o link no menu. Veja abaixo:
 
+```html
+<!-- /silver-enigma/meus_templates/global/parciais/menu.html -->
+<nav>
+    <ul>
+        <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
+        <li><a href="{% url 'galeria:index' %}">GALERIA</a></li>
+        <li><a href="{% url 'galeria:imagens' %}">IMAGENS</a></li>
+        <li><a href="{% url 'usuario:login' %}">LOGIN</a></li>
+        <li><a href="{% url 'usuario:cadastro' %}">CADASTRO</a></li>
+        <li><a href="{% url 'usuario:logout' %}">LOGOUT</a></li>
+    </ul>
+</nav>
+<div>
+    <form action="{% url 'galeria:busca' %}">
+        <input type="text" name="buscando" placeholder="o que quer buscar?">
+        <button type="submit">buscar</button>
+    </form>
+</div>
+```
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-7.png">
+    <img src="imagens/imagem-7.png">
 </p>
 
 Veja o que acontece se tentar entrar na página administrativa quando logado:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-8.png">
+    <img src="imagens/imagem-8.png">
 </p>
 
 ## 3. Mensagens ##
@@ -118,10 +150,10 @@ Repare que temos trocentas coisas acontecendo agora com o usuário, mas nenhuma 
 Vamos usá-la no arquivo `/usuario/views.py`. Veja como vai ficar:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-9.png">
+    <img src="imagens/imagem-9.png">
 </p>
 <p align="center">
-    <img width="700"  src="imagens/imagem-10.png">
+    <img src="imagens/imagem-10.png">
 </p>
 
 Como pode ser visto acima, é realizado a importação do messages. Através dela, são chamadas as funções success ou error de acordo com a necessidade. Veja que elas são chamadas sempre antes da função redirect e depois de ser feito algum teste, como usuário existente, senha incorreta etc.
@@ -129,7 +161,7 @@ Como pode ser visto acima, é realizado a importação do messages. Através del
 Agora, basta atualizar os arquivos HTMLs que são usados. Veja abaixo:
 
 <p align="center">
-    <img width="700"  src="imagens/imagem-11.png">
+    <img src="imagens/imagem-11.png">
 </p>
 
 Como todos os arquivos são herdados desses arquivos base (dos aplicativos usuario e galeria), vai ser melhor adicionar a chamada da mensagem neles (como esse arquivo está sendo usado o mesmo layout para ambos os aplicativos, ele poderia ser colocado na pasta de páginas globais e herdado por ambos os aplicativos).
