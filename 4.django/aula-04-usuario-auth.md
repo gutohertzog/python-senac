@@ -1,13 +1,4 @@
-<style>
-img{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.centro{
-    text-align: center;
-}
-</style>
-
-<h1 class="centro">Aula 04</h1>
+<h1 style="text-align:center;">Aula 04</h1>
 
 <h2>1. Usuário não Logado</h2>
 Agora que a aplicação está realizando o cadastro, login e logout do sistema, é possível realizar restrições de determinadas páginas, determinados aplicativos. Para esse tipo de restrição, é necessário usar uma validação do usuário autenticado.
