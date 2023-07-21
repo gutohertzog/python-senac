@@ -47,6 +47,9 @@ Abaixo estão listados os requisitos obrigatórios do projeto:
 * usar um formulário de busca dentro de algum aplicativo;
 * usar cadastro, login e logout de um usuário;
 * usar mensagens (do módulo django.contrib) para notificar o usuário;
+* permitir ao usuário cadastrar, alterar e apagar algum objeto;
+    * usando para isso os formulários específicos de cada um;
+* limitar o acesso a determinadas páginas do projeto com base no login do usuário;
 
 
 ## Plágios ##
@@ -61,6 +64,21 @@ Para esse critério, será usado as contribuições individuais de cada projeto.
 
 
 ## Entrega ##
-A definir.
+Será feita uma apresentação do projeto com presença obrigatória de todos integrantes do grupo;
+
+Como vai funcionar:
+- o grupo irá clonar o projeto do GitHub;
+- instalar as dependências a partir do arquivo de **requisitos.txt**;
+- executar o projeto;
+- apresentar o site e suas funcionalidades;
+
+Critérios avaliados:
+- conhecimento do projeto;
+- organização dos arquivos e código fonte;
+- contribuição ao projeto;
+- realização dos requisitos acima descritos;
+- apresentação do site;
+
+Após a apresentação, serão feitas perguntas sobre o projeto.
 
 [voltar ao topo](#trabalho-final)
